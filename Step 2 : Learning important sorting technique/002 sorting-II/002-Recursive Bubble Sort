@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void print(int arr[],int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        cout<<arr[i]<<" "; 
+    }
+}
+ 
+ 
+void recursivebubble(int arr[],int size)
+{
+    if(size==1)
+    {
+        return ;
+    }
+    
+    for(int i=0;i<size;i++)
+    {
+        if(arr[i]>arr[i+1])
+        {
+            swap(arr[i],arr[i+1]);
+        }
+    }
+    
+    recursivebubble(arr,size-1);
+ 
+}
+ 
+int main(){
+    int n=6;
+    int arr[n]={13,46,24,52,20,9};
+    
+    recursivebubble(arr,n);
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+}
