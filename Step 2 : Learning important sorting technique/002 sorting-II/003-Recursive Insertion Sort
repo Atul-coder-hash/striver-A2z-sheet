@@ -1,1 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+void insertionsort(int arr[],int size,int starting){
+    
+    if(starting==size)
+    {
+        return ;
+    }
+    
+    for(int i=size-1;i>starting;i--)
+    {
+        if(arr[i-1]>arr[i])
+        {
+             swap(arr[i-1],arr[i]);
+        }
+       
+    }
+        
+
+    insertionsort(arr,size,starting+1);
+    
+}
+
+int main()
+{
+    int n=6;
+    int arr[n]={13,46,24,52,20,9};
+    insertionsort(arr,n,0);
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+    
+}
+
 
