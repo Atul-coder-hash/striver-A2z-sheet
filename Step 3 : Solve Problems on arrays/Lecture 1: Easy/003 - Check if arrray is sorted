@@ -1,1 +1,76 @@
+                                                                                      #Bruteforce
+#include<bits/stdc++.h>
+using namespace std;
 
+bool issorted(int a[],int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        
+        for(int j=0;j<i;j++)
+        {
+            
+            if(a[j]>a[i])
+            {
+                 return false;
+            }
+       
+        }
+     
+    }
+    return true;
+    
+}
+
+int  main()
+{int n=7;
+    int a[7]={1,2,3,4,5,9,8};
+    
+    int res = issorted(a,7);
+    
+    if(res)
+    {
+        cout<<"true";
+    }
+    else{
+        cout<<"false";
+    }
+}
+
+
+                                                                #opitimal solution
+#include<bits/stdc++.h>
+using namespace std;
+
+bool issorted(int a[],int size)
+{
+    
+    for(int i=1;i<size;i++)  // i initialize with 1
+    {
+            if(a[i-1]>a[i])
+            {
+                 return false;
+            }
+  
+    }
+    return true;
+    
+}
+
+
+int  main()
+{int n=7;
+    int a[7]={1,2,3,4,5,9,8};
+    
+    int res = issorted(a,7);
+    
+    if(res)
+    {
+        cout<<"true";
+    }
+    else{
+        cout<<"false";
+    }
+}                                                                
+
+                                                                        
